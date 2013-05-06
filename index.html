@@ -36,7 +36,7 @@
       <p>You can try a version of this page <a onclick="window.location.hash = 'mono'; location.reload()">with a monospace font</a> to see this effect mostly go away.<p>
 
       <h1>Code</h1>
-      <p>You can find the source code on my github account.</p>
+      <p>You can find the source code on my <a href="https://github.com/fzembow/sortloader" target="_blank">>github page</a>.</p>
       <p>If you'd rather just run it on your website, you can copy and paste this snippet and run it once your page is loaded:</p>
       <textarea onclick="this.select()">function k(a){var b=[];a=a.childNodes;for(var d=0;d<a.length;d++){var c=a[d];1==c.nodeType?b=b.concat(k(c)):3==c.nodeType&&b.push(c)}return b}function l(a,b){for(var d=0,c=0;d<b.length;){for(var e=b[d],f=e.data,r=f.length,g="",h=0;h<r;h++){var n=f[h];n.match(/\S/)?(g+=a[c].a,c++):g+=n}e.data=g;d++}}function m(a,b){var d=!1;for(i=a.length-1;0<i;i--){var c=a[i],e=a[i-1];c.index<e.index&&(a[i-1]=c,a[i]=e,d=!0)}l(a,b);d&&setTimeout(m.bind(this,a,b),1)}
       var p=k(document.body),q=function(a){for(var b=[],d=0,c=0;c<a.length;c++)for(var e=a[c].data,f=0;f<e.length;f++)e[f].match(/\S/)&&(b.push({index:d,a:e[f]}),d++);b.sort(function(a,b){return a.a.charCodeAt(0)-b.a.charCodeAt(0)});return b}(p);l(q,p);m(q,p);</textarea>
